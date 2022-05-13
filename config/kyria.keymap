@@ -216,7 +216,7 @@
  */
 			bindings = <
       &kp LC(LS(LA(LG(F12)))) &trans &trans &trans &trans &kp UP                                                                         &trans &kp LC(LG(LEFT))     &kp LA(LG(UP))    &kp LC(LG(RIGHT))     &trans &trans 
-      &trans                  &trans &trans &trans &trans &kp DOWN                                                                       &trans &kp LA(LG(COMMA))     &kp LA(LC(LG(F))) &kp LA(LG(DOT))     &trans &trans 
+      &trans                  &trans &trans &trans &trans &kp DOWN                                                                       &trans &kp LA(LG(LEFT))     &kp LA(LC(LG(F))) &kp LA(LG(RIGHT))     &trans &trans 
       &trans                  &trans &trans &trans &trans &trans   &kp LEFT      &kp RIGHT    &kp LC(LEFT)         &kp LC(RIGHT)         &trans &kp LS(LC(LG(LEFT))) &kp LA(LG(DOWN))  &kp LS(LC(LG(RIGHT))) &trans &trans 
                                             &trans &trans &trans   &kp LG(LS(T)) &kp LG(W)    &kp LA(LC(LG(LEFT))) &kp LA(LC(LG(RIGHT))) &trans &kp LC(LEFT)         &kp LC(RIGHT) 
 			>;
