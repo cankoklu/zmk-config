@@ -59,7 +59,7 @@
  *                        `----------------------------------'  `----------------------------------'
  */
 			bindings = <
-     &hm LALT ESC    &kp Q   &kp W   &kp E        &kp R          &kp T                                              &kp Y       &kp U           &kp I     &kp O   &kp P     &hm LALT KP_PLUS
+     &fmt LALT ESC    &kp Q   &kp W   &kp E        &kp R          &kp T                                              &kp Y       &kp U           &kp I     &kp O   &kp P     &fmt LALT KP_PLUS
      &fmt LGUI GRAVE  &hm 1 A &hm 2 S &hm 4 D      &kp F          &kp G                                              &kp H       &kp J           &kp K     &kp L   &kp SEMI  &fmt RGUI SQT
      &fmt LSHIFT LPAR &kp Z   &kp X   &kp C        &kp V          &kp B   &kp LBKT &kp CAPS      &mo 5    &kp RBKT   &kp N       &kp M           &kp COMMA &kp DOT &kp SLASH &fmt RSHIFT RPAR
                                       &hm 6 LC(UP) &mt LCTRL LC(DOWN) &kp DEL &kp SPACE &kp TAB      &kp BSPC &kp ENTER  &hm 3 QMARK &mt RCTRL MINUS &kp CAPS
