@@ -15,6 +15,8 @@
 #define NAVIGATOR	1
 #define SELECTOR 2
 #define SYMBOLS 3
+#define NUMBERS 4
+#define FNUMBERS 5
 
 
 
@@ -146,7 +148,58 @@
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
 		};
 		
-		
+
+		numbers_layer {
+/*
+ * NUM Layer: Numbers and symbols
+ *
+ * ,-------------------------------------------.                              ,-------------------------------------------.
+ * |        |      |      |      |      |      |                              |   +  |  7   |  8   |  9   |  *   |        |
+ * |--------+------+------+------+------+------|                              |------+------+------+------+------+--------|
+ * | CAPS   |      |      |   x  |      |      |                              |   =  |  4   |  5   |  6   |  =   |        |
+ * |--------+------+------+------+------+------+-------------.  ,-------------+------+------+------+------+------+--------|
+ * |        |      |      |      |      |      |      |      |  |      |      |   -  |  1   |  2   |  3   |  /   |        |
+ * `----------------------+------+------+------+------+------|  |------+------+------+------+------+----------------------'
+ *                        |Access|Smiley|Thumb | ACopy|APaste|  |      |      |  0   |  .   |  .   |
+ *                        |      |      |      |      |      |  |      |      |      |      |      |
+ *                        `----------------------------------'  `----------------------------------'
+ */
+			bindings = <
+     &none    &none &none &none                 &none                 &none                                                                              &kp KP_PLUS  &kp KP_N7   &kp KP_N8  &kp KP_N9 &kp KP_ASTERISK  &trans
+     &kp CAPS &none &none &none                 &none                 &none                                                                              &kp KP_EQUAL &kp KP_N4   &kp KP_N5  &kp KP_N6 &kp KP_EQUAL     &trans
+     &none    &none &none &none                 &none                 &none                 &trans                &trans                   &trans &trans &kp KP_MINUS &kp KP_N1   &kp KP_N2  &kp KP_N3 &kp KP_SLASH     &trans
+                          &kp LG(LC(LA(LS(A)))) &kp LG(LC(LA(LS(B)))) &kp LG(LC(LA(LS(C)))) &kp LG(LC(LA(LS(O)))) &kp LG(LC(LA(LS(P))))    &trans &trans &kp KP_N0    &kp KP_DOT  &kp KP_DOT
+			>;
+
+			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+		};
+
+		fnumbers_layer {
+/*
+ * Function Layer: Function keys
+ *
+ * ,-------------------------------------------.                              ,-------------------------------------------.
+ * | TOBLE  |  F1  | F2   | F3   | F4   | F5   |                              |  F6  | F7   | F8   | F9   | F10  | F11    |
+ * |--------+------+------+------+------+------|                              |------+------+------+------+------+--------|
+ * | TOUSB  | BT0  | BT1  | BT2  | BT3  |      |                              |      |      |      |      |      | F12    |
+ * +--------+------+------+------+------+------+-------------.  ,-------------+------+------+------+------+------+--------|
+ * |        |      |      |      |      |      |      |      |  |   X  |      |      |      |      |      |      | CLR BT |
+ * `----------------------+------+------+------+------+------|  |------+------+------+------+------+----------------------'
+ *                        |      |      |      |      |      |  |      |      |      |      |      |
+ *                        |      |      |      |      |      |  |      |      |      |      |      |
+ *                        `----------------------------------'  `----------------------------------'
+ */
+			bindings = <
+      &out OUT_BLE    &kp F1       &kp F2       &kp F3       &kp F4       &kp F5                                  &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11
+      &out OUT_USB    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &trans                                  &trans &trans &trans &trans &trans  &kp F12
+      &trans          &trans       &trans       &trans       trans        &trans &trans &trans    &trans  &trans  &trans &trans &trans &trans &trans  &bt BT_CLR 
+                                                &trans       trans        &trans &trans &trans    &trans  &trans  &trans &trans &trans 
+			>;
+
+			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+		};
+
+	
 		
 		
 		
